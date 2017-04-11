@@ -1,0 +1,71 @@
+A "community" - "semantics" pair store.
+
+A community can contain up to 'parameterisation' element, called '*'.
+
+Number is more-specific to a '*'.
+
+Each community is linked to a 'function', and a dictionary of 'parameters'.
+
+Avoid that looking up a community integer, can result in multiple semantic meanings.
+
+Per 'function' the set of available parameters will differ.
+    
+    "2914:%i": {
+      "__comment": "ASN based single prepending",
+      "function": "prepend",
+      "parameters": {
+        "count": 1,
+        "target_asn": "%i",
+      }
+    }
+
+We need to define the following functions:
+
+	- prepend
+        - property: action
+        - prepend_count
+        - to: asn_grouping
+        - location
+    - no_export
+        - property: action
+        - to: asn_grouping
+        - location
+    - manipulate_lp_relative
+        - property: action
+        - lp_value
+        - location
+	- manipulate_med
+        - property: action
+        - med_value
+        - to: asn_grouping
+    - blackhole
+        - property: action
+        - location
+    - received
+        - property: informational
+        - from: asn_grouping
+        - location
+
+We need to define the following common parameters:
+
+    - location
+        * city, country, continent, global
+    - asn_grouping
+        * individual asns or classes like 'customers'
+
+------
+
+CODS defines the functions in a central schema
+
+Users define their own schema in JSON or YAML.
+
+Libaries and example programs are provided by CODS.
+
+-------
+
+scaffold outputs:
+
+    - comm2name tool
+    - search4comm tool
+    - meta schema for function & parameters 
+    - schema for routing policy itself
