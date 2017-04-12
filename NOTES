@@ -21,7 +21,7 @@ Per 'function' the set of available parameters will differ.
 
 We need to define the following functions:
 
-	- prepend
+    - prepend
         - property: action
         - prepend_count
         - to: asn_grouping
@@ -34,7 +34,7 @@ We need to define the following functions:
         - property: action
         - lp_value
         - location
-	- manipulate_med
+    - manipulate_med
         - property: action
         - med_value
         - to: asn_grouping
