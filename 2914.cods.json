@@ -34,7 +34,7 @@
             }
         },
         {
-            "name": "msa_map":
+            "name": "msa_map",
             "type": "msa2numeric",
             "content": {
                 "Ashburn, VA, US": "1001",
@@ -87,7 +87,7 @@
             }
         },
         {
-            "name": "unm49_map":
+            "name": "unm49_map",
             "type": "unm49numeric",
             "content": {
                 "021": ["3000","3075"],
