@@ -2,324 +2,302 @@
     "cods_schema_version": "0.0.0",
     "mappings": {
         "country_map": {
-            "type": "iso2numeric",
-            "value": {
-                "US": "2000",
-                "UK": "2201",
-                "DE": "2202",
-                "NL": "2203",
-                "FR": "2204",
-                "ES": "2205",
-                "PL": "2207",
-                "BG": "2208",
-                "HU": "2209",
-                "RO": "2210",
-                "BE": "2211",
-                "IT": "2212",
-                "SE": "2213",
-                "AT": "2214",
-                "LX": "2215",
-                "JP": "2401",
-                "AU": "2402",
-                "HK": "2403",
-                "TW": "2404",
-                "KR": "2405",
-                "SG": "2406",
-                "MY": "2407",
-                "ID": "2408",
-                "BN": "2409",
-                "TH": "2410",
-                "BR": "2601"
-            }
+            "US": "2000",
+            "UK": "2201",
+            "DE": "2202",
+            "NL": "2203",
+            "FR": "2204",
+            "ES": "2205",
+            "PL": "2207",
+            "BG": "2208",
+            "HU": "2209",
+            "RO": "2210",
+            "BE": "2211",
+            "IT": "2212",
+            "SE": "2213",
+            "AT": "2214",
+            "LX": "2215",
+            "JP": "2401",
+            "AU": "2402",
+            "HK": "2403",
+            "TW": "2404",
+            "KR": "2405",
+            "SG": "2406",
+            "MY": "2407",
+            "ID": "2408",
+            "BN": "2409",
+            "TH": "2410",
+            "BR": "2601"
         },
         "msa_map": {
-            "type": "msa2numeric",
-            "value": {
-                "Ashburn, VA, US": "1001",
-                "Sterling, VA, US": "1001",
-                "Atlanta, GA, US": "1002",
-                "Chicago, IL, US": "1003",
-                "Dallas, TX, US": "1004",
-                "Houston, TX, US": "1004",
-                "Los Angeles, CA, US": "1005",
-                "Miami, FL, US": "1006",
-                "Seattle, WA, US": "1007",
-                "Milpitas, CA, US": "1008",
-                "Mountain View, CA, US": "1008",
-                "Palo Alto, CA, US": "1008",
-                "San Jose, CA, US": "1008",
-                "Santa Clara, CA, US": "1008",
-                "New York, NY, US": "1009",
-                "Sacramento, CA, US": "1010",
-                "Boston, MA, US": "1011",
-                "Dusseldorf, DE": "1201",
-                "Frankfurt, DE": "1201",
-                "London, GB": "1203",
-                "Madrid, ES": "1204",
-                "Paris, FR": "1205",
-                "Amsterdam, NL": "1206",
-                "Warsaw, PL": "1207",
-                "Sofia, BG": "1208",
-                "Budapest, HU": "1209",
-                "Bucharest, RO": "1210",
-                "Milan, IT": "1212",
-                "Munich, DE": "1213",
-                "Stockholm, SE": "1214",
-                "Vienna, AT": "1215",
-                "Barcelona, ES": "1216",
-                "Valencia, ES": "1217",
-                "Luxembourg City, LU": "1218",
-                "Kuala Lumpur, MY": "1401",
-                "New Territories, HK": "1402",
-                "Osaka, JP": "1403",
-                "Seoul, KR": "1404",
-                "Singapore, SG": "1405",
-                "Sydney, AU": "1406",
-                "Taipei, TW": "1407",
-                "Tokyo, JP": "1408",
-                "Tseung Kwan O, HK": "1409",
-                "Jakarta, ID": "1410",
-                "Bandar Seri Begawan, BN": "1411",
-                "Bangkok, TH": "1412",
-                "Sao Paulo, BR": "1601"
-            }
+            "Ashburn, VA, US": "1001",
+            "Sterling, VA, US": "1001",
+            "Atlanta, GA, US": "1002",
+            "Chicago, IL, US": "1003",
+            "Dallas, TX, US": "1004",
+            "Houston, TX, US": "1004",
+            "Los Angeles, CA, US": "1005",
+            "Miami, FL, US": "1006",
+            "Seattle, WA, US": "1007",
+            "Milpitas, CA, US": "1008",
+            "Mountain View, CA, US": "1008",
+            "Palo Alto, CA, US": "1008",
+            "San Jose, CA, US": "1008",
+            "Santa Clara, CA, US": "1008",
+            "New York, NY, US": "1009",
+            "Sacramento, CA, US": "1010",
+            "Boston, MA, US": "1011",
+            "Dusseldorf, DE": "1201",
+            "Frankfurt, DE": "1201",
+            "London, GB": "1203",
+            "Madrid, ES": "1204",
+            "Paris, FR": "1205",
+            "Amsterdam, NL": "1206",
+            "Warsaw, PL": "1207",
+            "Sofia, BG": "1208",
+            "Budapest, HU": "1209",
+            "Bucharest, RO": "1210",
+            "Milan, IT": "1212",
+            "Munich, DE": "1213",
+            "Stockholm, SE": "1214",
+            "Vienna, AT": "1215",
+            "Barcelona, ES": "1216",
+            "Valencia, ES": "1217",
+            "Luxembourg City, LU": "1218",
+            "Kuala Lumpur, MY": "1401",
+            "New Territories, HK": "1402",
+            "Osaka, JP": "1403",
+            "Seoul, KR": "1404",
+            "Singapore, SG": "1405",
+            "Sydney, AU": "1406",
+            "Taipei, TW": "1407",
+            "Tokyo, JP": "1408",
+            "Tseung Kwan O, HK": "1409",
+            "Jakarta, ID": "1410",
+            "Bandar Seri Begawan, BN": "1411",
+            "Bangkok, TH": "1412",
+            "Sao Paulo, BR": "1601"
         },
         "unm49_map": {
-            "type": "unm49numeric",
-            "value": {
-                "021": ["3000","3075"],
-                "150": ["3200","3275"],
-                "030": ["3400","3475"],
-                "035": ["3400","3475"],
-                "053": ["3400","3475"],
-                "005": ["3600","3675"]
-            }
+            "021": ["3000","3075"],
+            "150": ["3200","3275"],
+            "030": ["3400","3475"],
+            "035": ["3400","3475"],
+            "053": ["3400","3475"],
+            "005": ["3600","3675"]
         }
     },
     "cods": [
         {
-            "community": "65520:*",
+            "community": "65400:(?<asn>[0-9]+)",
+            "type": "rfc1997",
             "definition": {
-                "remark": "only within country origin <nnnn> (see country origin list below)",
-                "function": "manipulate_lp_rel",
+                "remark": "do not advertise to peer nnn in North America",
+                "function": "no_export",
                 "parameters": {
-                    "delta": -70,
-                    "location": [{
-                        "type": "country",
-                        "value": "country_map"
-                    }]
+                    "unm49": [21],
+                    "asn": ["$asn"]
                 }
             }
         },
         {
-            "community": "65530:*",
+            "community": "65520:(?<country>.*)",
+            "type": "rfc1997",
+            "definition": {
+                "remark": "only within country origin <nnnn> (see country origin list below)",
+                "function": "manipulate_lp_rel",
+                "map": {
+                    "$country": "country_map"
+                },
+                "parameters": {
+                    "delta": -70,
+                    "country": "$country"
+                }
+            }
+        },
+        {
+            "community": "65530:(?<unm49>.*)",
+            "type": "rfc1997",
             "definition": {
                 "remark": "only within region <nnnn> (see region list below)",
                 "function": "manipulate_lp_rel",
+                "map": {
+                    "$unm49": "unm49_map"
+                },
                 "parameters": {
                     "delta": -70,
-                    "location": [{
-                        "type": "unm49",
-                        "value": "unm49_map"
-                    }]
+                    "unm49": "$unm49"
                 }
             }
         },
         {
             "community": "2914:435",
+            "type": "rfc1997",
             "definition": {
                 "remark": "only beyond the connected country",
                 "function": "manipulate_lp_rel",
                 "parameters": {
                     "delta": -70,
-                    "location": [{
-                        "type": "country",
-                        "value": "not_here"
-                    }]
+                    "country": ["not_here"]
                 }
             }
         },
         {
             "community": "2914:436",
+            "type": "rfc1997",
             "definition": {
                 "remark": "only beyond the connected region",
                 "function": "manipulate_lp_rel",
                 "parameters": {
                     "delta": -70,
-                    "location": [{
-                        "type": "unm49",
-                        "value": "not_here"
-                    }]
+                    "unm49": ["not_here"]
                 }
             }
         },
         {
             "community": "2914:450",
+            "type": "rfc1997",
             "definition": {
                 "remark": "customer fallback",
                 "function": "manipulate_lp_rel",
                 "parameters": {
-                    "delta": -24,
-                    "location": []
+                    "delta": -24
                 }
             }
         },
         {
             "community": "2914:460",
+            "type": "rfc1997",
             "definition": {
                 "remark": "peer backup",
                 "function": "manipulate_lp_rel",
                 "parameters": {
-                    "delta": -22,
-                    "location": []
+                    "delta": -22
                 }
             }
         },
         {
             "community": "2914:470",
+            "type": "rfc1997",
             "definition": {
                 "remark": "peer",
                 "function": "manipulate_lp_rel",
                 "parameters": {
-                    "delta": -20,
-                    "location": []
+                    "delta": -20
                 }
             }
         },
         {
             "community": "2914:480",
+            "type": "rfc1997",
             "definition": {
                 "remark": "customer backup",
                 "function": "manipulate_lp_rel",
                 "parameters": {
-                    "delta": -10,
-                    "location": []
+                    "delta": -10
                 }
             }
         },
         {
             "community": "2914:490",
+            "type": "rfc1997",
             "definition": {
                 "remark": "customer",
                 "function": "manipulate_lp_rel",
                 "parameters": {
-                    "delta": 0,
-                    "location": []
+                    "delta": 0
                 }
             }
         },
         {
             "community": "2914:411",
+            "type": "rfc1997",
             "definition": {
                 "remark": "prepends o/b to customer 1x",
                 "function": "prepend",
                 "parameters": {
                     "count": 1,
-                    "constraints": [{
-                        "type": "class",
-                        "value": "customers"
-                    }],
-                    "location": []
+                    "group": ["customers"]
                 }
             }
         },
         {
             "community": "2914:412",
+            "type": "rfc1997",
             "definition": {
                 "remark": "prepends o/b to customer 2x",
                 "function": "prepend",
                 "parameters": {
                     "count": 2,
-                    "constraints": [{
-                        "type": "class",
-                        "value": "customers"
-                    }],
-                    "location": []
+                    "group": ["customers"]
                 }
             }
         },
         {
             "community": "2914:413",
+            "type": "rfc1997",
             "definition": {
                 "remark": "prepends o/b to customer 3x",
                 "function": "prepend",
                 "parameters": {
                     "count": 3,
-                    "constraints": [{
-                        "type": "class",
-                        "value": "customers"
-                    }],
-                    "location": []
+                    "group": ["customers"]
                 }
             }
         },
         {
             "community": "2914:421",
+            "type": "rfc1997",
             "definition": {
                 "remark": "prepends o/b to peer 1x",
                 "function": "prepend",
                 "parameters": {
                     "count": 1,
-                    "constraints": [{
-                        "type": "class",
-                        "value": "peers"
-                    }],
-                    "location": []
+                    "group": ["peers"]
                 }
             }
         },
         {
             "community": "2914:422",
+            "type": "rfc1997",
             "definition": {
                 "remark": "prepends o/b to peer 2x",
                 "function": "prepend",
                 "parameters": {
                     "count": 2,
-                    "constraints": [{
-                        "type": "class",
-                        "value": "peers"
-                    }],
-                    "location": []
+                    "group": ["peers"]
                 }
             }
         },
         {
             "community": "2914:423",
+            "type": "rfc1997",
             "definition": {
                 "remark": "prepends o/b to peer 3x",
                 "function": "prepend",
                 "parameters": {
                     "count": 3,
-                    "constraints": [{
-                        "type": "class",
-                        "value": "peers"
-                    }],
-                    "location": []
+                    "group": ["peers"]
                 }
             }
         },
         {
             "community": "2914:429",
+            "type": "rfc1997",
             "definition": {
                 "remark": "do not advertise to any peer",
                 "function": "no_export",
-                "parameters": {
-                    "constraints": [],
-                    "location": []
-                }
+                "parameters": {}
             }
         },
         {
             "community": "2914:439",
+            "type": "rfc1997",
             "definition": {
                 "remark": "do not advertise to any peer outside region",
                 "function": "no_export",
                 "parameters": {
-                    "constraints": {},
-                    "location": [{
-                        "type": "unm49",
-                        "value": "not_here"
-                    }]
+                    "unm49": ["not_here"]
                 }
             }
         }
