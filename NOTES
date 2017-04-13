@@ -50,7 +50,11 @@ We need to define the following common parameters:
 
     - location
         * city, country, continent, global
-    - asn_grouping
+        types: "country", "msa", "unm49"
+        if the value exists in the mapping table, use that instead.
+
+    - constraints:
+        type: "class", "target_list"
         * individual asns or classes like 'customers'
 
 ------
