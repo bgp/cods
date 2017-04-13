@@ -124,7 +124,7 @@
                 }
             }
         },
-        "2914:435": {
+        "2914:436": {
             "remark": "only beyond the connected region",
             "function": "manipulate_lp_rel",
             "parameters": {
@@ -167,7 +167,7 @@
                 "location": "any"
             }
         },
-        "2914:480": {
+        "2914:490": {
             "remark": "customer",
             "function": "manipulate_lp_rel",
             "parameters": {
@@ -249,7 +249,7 @@
                 "location": "any"
             }
         },
-        "2914:429": {
+        "2914:439": {
             "remark": "do not advertise to any peer outside region",
             "function": "no_export",
             "parameters": {
