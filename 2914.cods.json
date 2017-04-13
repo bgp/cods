@@ -1,7 +1,8 @@
 {
     "cods_schema_version": "0.0.0",
-    "mappings": {
-        "country_map": {
+    "mappings": [
+        {
+            "name": "country_map",
             "type": "iso2numeric",
             "content": {
                 "US": "2000",
@@ -32,7 +33,8 @@
                 "BR": "2601"
             }
         },
-        "msa_map": {
+        {
+            "name": "msa_map":
             "type": "msa2numeric",
             "content": {
                 "Ashburn, VA, US": "1001",
@@ -84,7 +86,8 @@
                 "Sao Paulo, BR": "1601"
             }
         },
-        "unm49_map": {
+        {
+            "name": "unm49_map":
             "type": "unm49numeric",
             "content": {
                 "021": ["3000","3075"],
@@ -95,176 +98,227 @@
                 "005": ["3600","3675"]
             }
         }
-    }, 
-    "cods": {
-        "65520:*": {
-            "remark": "only within country origin <nnnn> (see country origin list below)",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -70,
-                "location": {
-                    "type": "country",
-                    "mapping": "country_map"
+    ],
+    "cods": [
+        {
+            "community": "65520:*",
+            "definition": {
+                "remark": "only within country origin <nnnn> (see country origin list below)",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -70,
+                    "location": {
+                        "type": "country",
+                        "mapping": "country_map"
+                    }
                 }
             }
         },
-        "65530:*": {
-            "remark": "only within region <nnnn> (see region list below)",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -70,
-                "location": {
-                    "type": "unm49",
-                    "mapping": "unm49_map"
+        {
+            "community": "65530:*",
+            "definition": {
+                "remark": "only within region <nnnn> (see region list below)",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -70,
+                    "location": {
+                        "type": "unm49",
+                        "mapping": "unm49_map"
+                    }
                 }
             }
         },
-        "2914:435": {
-            "remark": "only beyond the connected country",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -70,
-                "location": {
-                    "type": "country",
-                    "value": "not_here"
+        {
+            "community": "2914:435",
+            "definition": {
+                "remark": "only beyond the connected country",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -70,
+                    "location": {
+                        "type": "country",
+                        "value": "not_here"
+                    }
                 }
             }
         },
-        "2914:436": {
-            "remark": "only beyond the connected region",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -70,
-                "location": {
-                    "type": "unm49",
-                    "value": "not_here"
+        {
+            "community": "2914:436",
+            "definition": {
+                "remark": "only beyond the connected region",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -70,
+                    "location": {
+                        "type": "unm49",
+                        "value": "not_here"
+                    }
                 }
             }
         },
-        "2914:450": {
-            "remark": "customer fallback",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -24,
-                "location": "any"
+        {
+            "community": "2914:450",
+            "definition": {
+                "remark": "customer fallback",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -24,
+                    "location": []
+                }
             }
         },
-        "2914:460": {
-            "remark": "peer backup",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -22,
-                "location": "any"
+        {
+            "community": "2914:460",
+            "definition": {
+                "remark": "peer backup",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -22,
+                    "location": []
+                }
             }
         },
-        "2914:470": {
-            "remark": "peer",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -20,
-                "location": "any"
+        {
+            "community": "2914:470",
+            "definition": {
+                "remark": "peer",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -20,
+                    "location": []
+                }
             }
         },
-        "2914:480": {
-            "remark": "customer backup",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": -10,
-                "location": "any"
+        {
+            "community": "2914:480",
+            "definition": {
+                "remark": "customer backup",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": -10,
+                    "location": []
+                }
             }
         },
-        "2914:490": {
-            "remark": "customer",
-            "function": "manipulate_lp_rel",
-            "parameters": {
-                "delta": 0,
-                "location": "any"
+        {
+            "community": "2914:490",
+            "definition": {
+                "remark": "customer",
+                "function": "manipulate_lp_rel",
+                "parameters": {
+                    "delta": 0,
+                    "location": []
+                }
             }
         },
-        "2914:411": {
-            "remark": "prepends o/b to customer 1x",
-            "function": "prepend",
-            "parameters": {
-                "count": 1,
-                "context": {
-                    "class": "customers"
-                },
-                "location": "any"
+        {
+            "community": "2914:411",
+            "definition": {
+                "remark": "prepends o/b to customer 1x",
+                "function": "prepend",
+                "parameters": {
+                    "count": 1,
+                    "contraints": {
+                        "class": "customers"
+                    },
+                    "location": []
+                }
             }
         },
-        "2914:412": {
-            "remark": "prepends o/b to customer 2x",
-            "function": "prepend",
-            "parameters": {
-                "count": 2,
-                "context": {
-                    "class": "customers"
-                },
-                "location": "any"
+        {
+            "community": "2914:412",
+            "definition": {
+                "remark": "prepends o/b to customer 2x",
+                "function": "prepend",
+                "parameters": {
+                    "count": 2,
+                    "contraints": {
+                        "class": "customers"
+                    },
+                    "location": []
+                }
             }
         },
-        "2914:413": {
-            "remark": "prepends o/b to customer 3x",
-            "function": "prepend",
-            "parameters": {
-                "count": 3,
-                "context": {
-                    "class": "customers"
-                },
-                "location": "any"
+        {
+            "community": "2914:413",
+            "definition": {
+                "remark": "prepends o/b to customer 3x",
+                "function": "prepend",
+                "parameters": {
+                    "count": 3,
+                    "contraints": {
+                        "class": "customers"
+                    },
+                    "location": []
+                }
             }
         },
-        "2914:421": {
-            "remark": "prepends o/b to peer 1x",
-            "function": "prepend",
-            "parameters": {
-                "count": 1,
-                "context": {
-                    "class": "peers"
-                },
-                "location": "any"
+        {
+            "community": "2914:421",
+            "definition": {
+                "remark": "prepends o/b to peer 1x",
+                "function": "prepend",
+                "parameters": {
+                    "count": 1,
+                    "contraints": {
+                        "class": "peers"
+                    },
+                    "location": []
+                }
             }
         },
-        "2914:422": {
-            "remark": "prepends o/b to peer 2x",
-            "function": "prepend",
-            "parameters": {
-                "count": 2,
-                "context": {
-                    "class": "peers"
-                },
-                "location": "any"
+        {
+            "community": "2914:422",
+            "definition": {
+                "remark": "prepends o/b to peer 2x",
+                "function": "prepend",
+                "parameters": {
+                    "count": 2,
+                    "contraints": {
+                        "class": "peers"
+                    },
+                    "location": []
+                }
             }
         },
-        "2914:423": {
-            "remark": "prepends o/b to peer 3x",
-            "function": "prepend",
-            "parameters": {
-                "count": 3,
-                "context": {
-                    "class": "peers"
-                },
-                "location": "any"
+        {
+            "community": "2914:423",
+            "definition": {
+                "remark": "prepends o/b to peer 3x",
+                "function": "prepend",
+                "parameters": {
+                    "count": 3,
+                    "contraints": {
+                        "class": "peers"
+                    },
+                    "location": []
+                }
             }
         },
-        "2914:429": {
-            "remark": "do not advertise to any peer",
-            "function": "no_export",
-            "parameters": {
-                "context": "any",
-                "location": "any"
+        {
+            "community": "2914:429",
+            "definition": {
+                "remark": "do not advertise to any peer",
+                "function": "no_export",
+                "parameters": {
+                    "contraints": [],
+                    "location": []
+                }
             }
         },
-        "2914:439": {
-            "remark": "do not advertise to any peer outside region",
-            "function": "no_export",
-            "parameters": {
-                "context": "any",
-                "location": {
-                    "type": "unm49",
-                    "value": "not_here"
+        {
+            "community": "2914:439",
+            "definition": {
+                "remark": "do not advertise to any peer outside region",
+                "function": "no_export",
+                "parameters": {
+                    "contraints": {},
+                    "location": {
+                        "type": "unm49",
+                        "value": "not_here"
+                    }
                 }
             }
         }
-    }
+    ]
 }
