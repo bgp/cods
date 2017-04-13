@@ -1,0 +1,264 @@
+{
+    "cods_schema_version": "0.0.0",
+    "mappings": {
+        "country_map": {
+            "__comment": "ISO 2-letter country code to NTT numeric identifier",
+            "US": "2000",
+            "UK": "2201",
+            "DE": "2202",
+            "NL": "2203",
+            "FR": "2204",
+            "ES": "2205",
+            "PL": "2207",
+            "BG": "2208",
+            "HU": "2209",
+            "RO": "2210",
+            "BE": "2211",
+            "IT": "2212",
+            "SE": "2213",
+            "AT": "2214",
+            "LX": "2215",
+            "JP": "2401",
+            "AU": "2402",
+            "HK": "2403",
+            "TW": "2404",
+            "KR": "2405",
+            "SG": "2406",
+            "MY": "2407",
+            "ID": "2408",
+            "BN": "2409",
+            "TH": "2410",
+            "BR": "2601"
+        },
+        "msa_map": {
+            "__comment": "Metropolitan Statistical Area (MSA) mapped to NTT numeric identifiers",
+            "Ashburn, VA, US": "1001",
+            "Sterling, VA, US": "1001",
+            "Atlanta, GA, US": "1002",
+            "Chicago, IL, US": "1003",
+            "Dallas, TX, US": "1004",
+            "Houston, TX, US": "1004",
+            "Los Angeles, CA, US": "1005",
+            "Miami, FL, US": "1006",
+            "Seattle, WA, US": "1007",
+            "Milpitas, CA, US": "1008",
+            "Mountain View, CA, US": "1008",
+            "Palo Alto, CA, US": "1008",
+            "San Jose, CA, US": "1008",
+            "Santa Clara, CA, US": "1008",
+            "New York, NY, US": "1009",
+            "Sacramento, CA, US": "1010",
+            "Boston, MA, US": "1011",
+            "Dusseldorf, DE": "1201",
+            "Frankfurt, DE": "1201",
+            "London, GB": "1203",
+            "Madrid, ES": "1204",
+            "Paris, FR": "1205",
+            "Amsterdam, NL": "1206",
+            "Warsaw, PL": "1207",
+            "Sofia, BG": "1208",
+            "Budapest, HU": "1209",
+            "Bucharest, RO": "1210",
+            "Milan, IT": "1212",
+            "Munich, DE": "1213",
+            "Stockholm, SE": "1214",
+            "Vienna, AT": "1215",
+            "Barcelona, ES": "1216",
+            "Valencia, ES": "1217",
+            "Luxembourg City, LU": "1218",
+            "Kuala Lumpur, MY": "1401",
+            "New Territories, HK": "1402",
+            "Osaka, JP": "1403",
+            "Seoul, KR": "1404",
+            "Singapore, SG": "1405",
+            "Sydney, AU": "1406",
+            "Taipei, TW": "1407",
+            "Tokyo, JP": "1408",
+            "Tseung Kwan O, HK": "1409",
+            "Jakarta, ID": "1410",
+            "Bandar Seri Begawan, BN": "1411",
+            "Bangkok, TH": "1412",
+            "Sao Paulo, BR": "1601"
+        },
+        "unm49_map": {
+            "__comment": "UN M.49 mapping to NTT numeric identifier",
+            "021": ["3000","3075"],
+            "150": ["3200","3275"],
+            "030": ["3400","3475"],
+            "035": ["3400","3475"],
+            "053": ["3400","3475"],
+            "005": ["3600","3675"]
+        }
+    }, 
+    "cods": {
+        "65520:*": {
+            "remark": "only within country origin <nnnn> (see country origin list below)",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -70,
+                "location": {
+                    "type": "country",
+                    "mapping": "country_map"
+                }
+            }
+        },
+        "65530:*": {
+            "remark": "only within region <nnnn> (see region list below)",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -70,
+                "location": {
+                    "type": "unm49",
+                    "mapping": "unm49_map"
+                }
+            }
+        },
+        "2914:435": {
+            "remark": "only beyond the connected country",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -70,
+                "location": {
+                    "type": "country",
+                    "value": "not_here"
+                }
+            }
+        },
+        "2914:435": {
+            "remark": "only beyond the connected region",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -70,
+                "location": {
+                    "type": "unm49",
+                    "value": "not_here"
+                }
+            }
+        },
+        "2914:450": {
+            "remark": "customer fallback",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -24,
+                "location": "any"
+            }
+        },
+        "2914:460": {
+            "remark": "peer backup",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -22,
+                "location": "any"
+            }
+        },
+        "2914:470": {
+            "remark": "peer",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -20,
+                "location": "any"
+            }
+        },
+        "2914:480": {
+            "remark": "customer backup",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": -10,
+                "location": "any"
+            }
+        },
+        "2914:480": {
+            "remark": "customer",
+            "function": "manipulate_lp_rel",
+            "parameters": {
+                "delta": 0,
+                "location": "any"
+            }
+        },
+        "2914:411": {
+            "remark": "prepends o/b to customer 1x",
+            "function": "prepend",
+            "parameters": {
+                "count": 1,
+                "context": {
+                    "class": "customers"
+                },
+                "location": "any"
+            }
+        },
+        "2914:412": {
+            "remark": "prepends o/b to customer 2x",
+            "function": "prepend",
+            "parameters": {
+                "count": 2,
+                "context": {
+                    "class": "customers"
+                },
+                "location": "any"
+            }
+        },
+        "2914:413": {
+            "remark": "prepends o/b to customer 3x",
+            "function": "prepend",
+            "parameters": {
+                "count": 3,
+                "context": {
+                    "class": "customers"
+                },
+                "location": "any"
+            }
+        },
+        "2914:421": {
+            "remark": "prepends o/b to peer 1x",
+            "function": "prepend",
+            "parameters": {
+                "count": 1,
+                "context": {
+                    "class": "peers"
+                },
+                "location": "any"
+            }
+        },
+        "2914:422": {
+            "remark": "prepends o/b to peer 2x",
+            "function": "prepend",
+            "parameters": {
+                "count": 2,
+                "context": {
+                    "class": "peers"
+                },
+                "location": "any"
+            }
+        },
+        "2914:423": {
+            "remark": "prepends o/b to peer 3x",
+            "function": "prepend",
+            "parameters": {
+                "count": 3,
+                "context": {
+                    "class": "peers"
+                },
+                "location": "any"
+            }
+        },
+        "2914:429": {
+            "remark": "do not advertise to any peer",
+            "function": "no_export",
+            "parameters": {
+                "context": "any",
+                "location": "any"
+            }
+        },
+        "2914:429": {
+            "remark": "do not advertise to any peer outside region",
+            "function": "no_export",
+            "parameters": {
+                "context": "any",
+                "location": {
+                    "type": "unm49",
+                    "value": "not_here"
+                }
+            }
+        }
+    }
+}
