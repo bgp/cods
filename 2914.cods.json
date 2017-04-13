@@ -218,7 +218,7 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 1,
-                    "contraints": [{
+                    "constraints": [{
                         "type": "class",
                         "value": "customers"
                     }],
@@ -233,7 +233,7 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 2,
-                    "contraints": [{
+                    "constraints": [{
                         "type": "class",
                         "value": "customers"
                     }],
@@ -248,7 +248,7 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 3,
-                    "contraints": [{
+                    "constraints": [{
                         "type": "class",
                         "value": "customers"
                     }],
@@ -263,7 +263,7 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 1,
-                    "contraints": [{
+                    "constraints": [{
                         "type": "class",
                         "value": "peers"
                     }],
@@ -278,7 +278,7 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 2,
-                    "contraints": [{
+                    "constraints": [{
                         "type": "class",
                         "value": "peers"
                     }],
@@ -293,7 +293,7 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 3,
-                    "contraints": [{
+                    "constraints": [{
                         "type": "class",
                         "value": "peers"
                     }],
@@ -307,7 +307,7 @@
                 "remark": "do not advertise to any peer",
                 "function": "no_export",
                 "parameters": {
-                    "contraints": [],
+                    "constraints": [],
                     "location": []
                 }
             }
@@ -318,7 +318,7 @@
                 "remark": "do not advertise to any peer outside region",
                 "function": "no_export",
                 "parameters": {
-                    "contraints": {},
+                    "constraints": {},
                     "location": [{
                         "type": "unm49",
                         "value": "not_here"
