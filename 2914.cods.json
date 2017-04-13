@@ -1,10 +1,9 @@
 {
     "cods_schema_version": "0.0.0",
-    "mappings": [
-        {
-            "name": "country_map",
+    "mappings": {
+        "country_map": {
             "type": "iso2numeric",
-            "content": {
+            "value": {
                 "US": "2000",
                 "UK": "2201",
                 "DE": "2202",
@@ -33,10 +32,9 @@
                 "BR": "2601"
             }
         },
-        {
-            "name": "msa_map",
+        "msa_map": {
             "type": "msa2numeric",
-            "content": {
+            "value": {
                 "Ashburn, VA, US": "1001",
                 "Sterling, VA, US": "1001",
                 "Atlanta, GA, US": "1002",
@@ -86,10 +84,9 @@
                 "Sao Paulo, BR": "1601"
             }
         },
-        {
-            "name": "unm49_map",
+        "unm49_map": {
             "type": "unm49numeric",
-            "content": {
+            "value": {
                 "021": ["3000","3075"],
                 "150": ["3200","3275"],
                 "030": ["3400","3475"],
@@ -98,7 +95,7 @@
                 "005": ["3600","3675"]
             }
         }
-    ],
+    },
     "cods": [
         {
             "community": "65520:*",
