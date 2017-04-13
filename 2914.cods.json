@@ -107,10 +107,10 @@
                 "function": "manipulate_lp_rel",
                 "parameters": {
                     "delta": -70,
-                    "location": {
+                    "location": [{
                         "type": "country",
-                        "mapping": "country_map"
-                    }
+                        "value": "country_map"
+                    }]
                 }
             }
         },
@@ -121,10 +121,10 @@
                 "function": "manipulate_lp_rel",
                 "parameters": {
                     "delta": -70,
-                    "location": {
+                    "location": [{
                         "type": "unm49",
-                        "mapping": "unm49_map"
-                    }
+                        "value": "unm49_map"
+                    }]
                 }
             }
         },
@@ -135,10 +135,10 @@
                 "function": "manipulate_lp_rel",
                 "parameters": {
                     "delta": -70,
-                    "location": {
+                    "location": [{
                         "type": "country",
                         "value": "not_here"
-                    }
+                    }]
                 }
             }
         },
@@ -149,10 +149,10 @@
                 "function": "manipulate_lp_rel",
                 "parameters": {
                     "delta": -70,
-                    "location": {
+                    "location": [{
                         "type": "unm49",
                         "value": "not_here"
-                    }
+                    }]
                 }
             }
         },
@@ -218,9 +218,10 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 1,
-                    "contraints": {
-                        "class": "customers"
-                    },
+                    "contraints": [{
+                        "type": "class",
+                        "value": "customers"
+                    }],
                     "location": []
                 }
             }
@@ -232,9 +233,10 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 2,
-                    "contraints": {
-                        "class": "customers"
-                    },
+                    "contraints": [{
+                        "type": "class",
+                        "value": "customers"
+                    }],
                     "location": []
                 }
             }
@@ -246,9 +248,10 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 3,
-                    "contraints": {
-                        "class": "customers"
-                    },
+                    "contraints": [{
+                        "type": "class",
+                        "value": "customers"
+                    }],
                     "location": []
                 }
             }
@@ -260,9 +263,10 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 1,
-                    "contraints": {
-                        "class": "peers"
-                    },
+                    "contraints": [{
+                        "type": "class",
+                        "value": "peers"
+                    }],
                     "location": []
                 }
             }
@@ -274,9 +278,10 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 2,
-                    "contraints": {
-                        "class": "peers"
-                    },
+                    "contraints": [{
+                        "type": "class",
+                        "value": "peers"
+                    }],
                     "location": []
                 }
             }
@@ -288,9 +293,10 @@
                 "function": "prepend",
                 "parameters": {
                     "count": 3,
-                    "contraints": {
-                        "class": "peers"
-                    },
+                    "contraints": [{
+                        "type": "class",
+                        "value": "peers"
+                    }],
                     "location": []
                 }
             }
@@ -313,10 +319,10 @@
                 "function": "no_export",
                 "parameters": {
                     "contraints": {},
-                    "location": {
+                    "location": [{
                         "type": "unm49",
                         "value": "not_here"
-                    }
+                    }]
                 }
             }
         }
