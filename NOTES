@@ -53,6 +53,12 @@ We need to define the following common parameters:
         types: "country", "msa", "unm49"
         if the value exists in the mapping table, use that instead.
 
+        magic values: "not_here" and "here":
+            'here' means the country, msa, region (depends on the type) in
+                   which the route announcement was received.
+            'not_here' means any countries, msa, regions (depends on the type)
+                    outside the location where the route was received.
+
     - constraints:
         type: "class", "target_list"
         * individual asns or classes like 'customers'
